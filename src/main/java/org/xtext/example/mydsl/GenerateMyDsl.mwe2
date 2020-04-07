@@ -10,17 +10,17 @@ Workflow {
 	component = XtextGenerator {
 		configuration = {
 			project = StandardProjectConfig {
-				baseName = "org.xtext.example.mydsl"
+				baseName = "xtend-example"
 				rootPath = rootPath
 				mavenLayout = true
 				runtimeTest = {
 					enabled = true
 				}
 				eclipsePlugin = {
-					enabled = true
+					enabled = false
 				}
 				eclipsePluginTest = {
-					enabled = true
+					enabled = false
 				}
 				createEclipseMetaData = true
 			}
