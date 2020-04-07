@@ -7,8 +7,8 @@
 	<groupId>org.xtext</groupId>
 	<artifactId>org.xtext.example.mydsl</artifactId>
 	<name>Xtend-Example</name>
-	<version>1.0.2-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<version>1.0.0</version>
+	<packaging>eclipse-plugin</packaging>
 
 	<properties>
 		<sfl4j.version>1.7.7</sfl4j.version>
@@ -29,6 +29,19 @@
 		<emf-codegen-version>2.19.0</emf-codegen-version>
 		<exec-mvn-plugin-version>1.6.0</exec-mvn-plugin-version>
 	</properties>
+
+	<repositories>
+		<repository>
+			<id>eclipse</id>
+			<url>http://download.eclipse.org/releases/2019-12</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>Xtext Update Site</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/modeling/tmf/xtext/updates/releases/${xtext-version}/</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
@@ -58,6 +71,14 @@
 							<arch>x86_64</arch>
 						</environment>
 					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-repository-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<includeAllDependencies>true</includeAllDependencies>
 				</configuration>
 			</plugin>
 			<plugin>
