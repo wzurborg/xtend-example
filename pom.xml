@@ -23,7 +23,7 @@
 		<maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
 		<jacoco-maven-plugin-version>0.8.4</jacoco-maven-plugin-version>
 		<build-helper-maven-plugin-version>3.0.0</build-helper-maven-plugin-version>
-		<junit-version>4.12</junit-version>
+		<junit-version>4.13.1</junit-version>
 		<xtext-version>2.20.0</xtext-version>
 		<mwe2launch-version>2.11.1</mwe2launch-version>
 		<emf-codegen-version>2.19.0</emf-codegen-version>
